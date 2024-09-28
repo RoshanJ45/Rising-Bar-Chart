@@ -1,0 +1,48 @@
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+        }
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            height: 200px;
+        }
+        .bar {
+            width: 30px;
+            background: linear-gradient(to top, #ff6b6b, #ffa36c);
+            animation: rise 2s ease-in-out forwards;
+        }
+        .bar:nth-child(1) {
+            height: 0;
+            animation-delay: 0.1s;
+            --bar-height: 120px;
+        }
+        .bar:nth-child(2) {
+            height: 0;
+            animation-delay: 0.3s;
+            --bar-height: 180px;
+        }
+        .bar:nth-child(3) {
+            height: 0;
+            animation-delay: 0.5s;
+            --bar-height: 150px;
+        }
+        .bar:nth-child(4) {
+            height: 0;
+            animation-delay: 0.7s;
+            --bar-height: 200px;
+        }
+        @keyframes rise {
+            0% {
+                height: 0;
+            }
+            100% {
+                height: var(--bar-height);
+            }
+        }
+    
